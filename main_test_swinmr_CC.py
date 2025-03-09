@@ -27,7 +27,7 @@ import shutil
 
 
 def main(json_path):
-    json_path = '/kaggle/working/options/SwinMR/example/test/test_swinmr_CCpi_G1D30.json'
+    json_path = '/kaggle/working/dissertation/options/SwinMR/example/test/test_swinmr_CCpi_G1D30.json'
     parser = argparse.ArgumentParser()
     parser.add_argument('--opt', type=str, default=json_path, help='Path to option JSON file.')
     opt = option.parse(parser.parse_args().opt, is_train=False)
@@ -276,6 +276,6 @@ def setup(args):
 
 if __name__ == '__main__':
 
-    main(json_path='/kaggle/working/options/SwinMR/example/test/test_swinmr_CCpi_G1D30.json')
+    main(json_path='/kaggle/working/dissertation/options/SwinMR/example/test/test_swinmr_CCpi_G1D30.json')
 
 
