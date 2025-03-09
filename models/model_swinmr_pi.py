@@ -19,7 +19,7 @@ from torch.optim import Adam, AdamW
 from models.select_network import define_G
 from models.model_base import ModelBase
 from models.loss import CharbonnierLoss, PerceptualLoss
-from models.loss_ssim import SSIMLoss
+# from models.loss_ssim import SSIMLoss
 
 from utils.utils_model import test_mode
 from utils.utils_regularizers import regularizer_orth, regularizer_clip
@@ -117,8 +117,8 @@ class MRI_SwinMR_PI(ModelBase):
             self.G_lossfn = nn.MSELoss().to(self.device)
         elif G_lossfn_type == 'l2sum':
             self.G_lossfn = nn.MSELoss(reduction='sum').to(self.device)
-        elif G_lossfn_type == 'ssim':
-            self.G_lossfn = SSIMLoss().to(self.device)
+        # elif G_lossfn_type == 'ssim':
+            # self.G_lossfn = SSIMLoss().to(self.device)
         elif G_lossfn_type == 'charbonnier':
             self.G_lossfn = CharbonnierLoss(self.opt_train['G_charbonnier_eps']).to(self.device)
         else:
