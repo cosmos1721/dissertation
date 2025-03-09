@@ -101,7 +101,7 @@
     F_use_input_norm: True
     F_use_range_norm: False
   ]
-  opt_path: C:\Users\nitis\OneDrive\Desktop\dissertation\swinmr\options\SwinMR\example\train_swinmr_CCnpi_G1D30.json
+  opt_path: .\options\SwinMR\example\train_swinmr_CCnpi_G1D30.json
   is_train: True
   merge_bn: False
   merge_bn_startpoint: -1
@@ -215,7 +215,7 @@
     F_use_input_norm: True
     F_use_range_norm: False
   ]
-  opt_path: C:\Users\nitis\OneDrive\Desktop\dissertation\swinmr\options\SwinMR\example\train_swinmr_CCnpi_G1D30.json
+  opt_path: .\options\SwinMR\example\train_swinmr_CCnpi_G1D30.json
   is_train: True
   merge_bn: False
   merge_bn_startpoint: -1
@@ -329,7 +329,7 @@
     F_use_input_norm: True
     F_use_range_norm: False
   ]
-  opt_path: C:\Users\nitis\OneDrive\Desktop\dissertation\swinmr\options\SwinMR\example\train_swinmr_CCnpi_G1D30.json
+  opt_path: .\options\SwinMR\example\train_swinmr_CCnpi_G1D30.json
   is_train: True
   merge_bn: False
   merge_bn_startpoint: -1
@@ -443,7 +443,7 @@
     F_use_input_norm: True
     F_use_range_norm: False
   ]
-  opt_path: C:\Users\nitis\OneDrive\Desktop\dissertation\swinmr\options\SwinMR\example\train_swinmr_CCnpi_G1D30.json
+  opt_path: .\options\SwinMR\example\train_swinmr_CCnpi_G1D30.json
   is_train: True
   merge_bn: False
   merge_bn_startpoint: -1

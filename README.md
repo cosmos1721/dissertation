@@ -64,7 +64,7 @@ Use different options (json files) to train different networks.
 
 To train SwinMR (PI) on CC:
 
-`python main_train_swinmr.py --opt C:\Users\nitis\OneDrive\Desktop\dissertation\swinmr\options\SwinMR\example\train_swinmr_CCpi_G1D30.json`
+`python main_train_swinmr.py --opt .\options\SwinMR\example\train_swinmr_CCpi_G1D30.json`
 
 To test SwinMR (PI) on CC:
 
