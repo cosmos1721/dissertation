@@ -1,0 +1,456 @@
+25-03-10 01:19:38.140 :   task: swinmr_CCnpi_G1D30
+  model: swinmr_npi
+  mask: G1D30
+  gpu_ids: [0, 1]
+  dist: False
+  n_channels: 1
+  manual_seed: 42
+  path:[
+    root: mri_recon
+    pretrained_netG: None
+    pretrained_netE: None
+    task: mri_recon\swinmr_CCnpi_G1D30
+    log: mri_recon\swinmr_CCnpi_G1D30
+    options: mri_recon\swinmr_CCnpi_G1D30\options
+    models: mri_recon\swinmr_CCnpi_G1D30\models
+    images: mri_recon\swinmr_CCnpi_G1D30\images
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: ccsagnpi
+      dataroot_H: C:/Users/nitis/OneDrive/Desktop/dissertation/swinmr/trainsets/db_train
+      mask: G1D30
+      H_size: 96
+      sigma: 15
+      sigma_test: 15
+      is_noise: False
+      noise_level: 0.0
+      noise_var: 0.1
+      is_mini_dataset: False
+      mini_dataset_prec: 1
+      dataloader_shuffle: True
+      dataloader_num_workers: 16
+      dataloader_batch_size: 8
+      phase: train
+      scale: 1
+      n_channels: 1
+    ]
+    test:[
+      name: test_dataset
+      dataset_type: ccsagnpi
+      dataroot_H: C:/Users/nitis/OneDrive/Desktop/dissertation/swinmr/testsets/db_test
+      mask: G1D30
+      sigma: 15
+      sigma_test: 15
+      is_noise: False
+      noise_level: 0.0
+      noise_var: 0.1
+      resize_for_fid: False
+      phase: test
+      scale: 1
+      n_channels: 1
+    ]
+  ]
+  netG:[
+    net_type: swinir
+    upscale: 1
+    in_chans: 1
+    img_size: 256
+    window_size: 8
+    img_range: 1.0
+    depths: [6, 6, 6, 6, 6, 6]
+    embed_dim: 180
+    num_heads: [6, 6, 6, 6, 6, 6]
+    mlp_ratio: 2
+    upsampler: None
+    resi_connection: 1conv
+    init_type: default
+    scale: 1
+  ]
+  train:[
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    G_charbonnier_eps: 1e-09
+    alpha: 15
+    beta: 0.1
+    gamma: 0.0025
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0002
+    G_optimizer_wd: 0
+    G_optimizer_clipgrad: None
+    G_optimizer_reuse: True
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [50000, 70000, 90000, 100000, 110000]
+    G_scheduler_gamma: 0.5
+    G_regularizer_orthstep: None
+    G_regularizer_clipstep: None
+    G_param_strict: True
+    E_param_strict: True
+    checkpoint_test: 10000
+    checkpoint_save: 10000
+    checkpoint_print: 200
+    is_early_stopping: False
+    early_stopping_num: 8
+    freeze_patch_embedding: False
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+  ]
+  opt_path: C:\Users\nitis\OneDrive\Desktop\dissertation\swinmr\options\SwinMR\example\train_swinmr_CCnpi_G1D30.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: True
+  num_gpu: 2
+  rank: 0
+  world_size: 1
+
+25-03-10 01:19:38.374 : Number of train images: 25, iters: 4
+25-03-10 01:20:26.147 :   task: swinmr_CCnpi_G1D30
+  model: swinmr_npi
+  mask: G1D30
+  gpu_ids: [0, 1]
+  dist: False
+  n_channels: 1
+  manual_seed: 42
+  path:[
+    root: mri_recon
+    pretrained_netG: None
+    pretrained_netE: None
+    task: mri_recon\swinmr_CCnpi_G1D30
+    log: mri_recon\swinmr_CCnpi_G1D30
+    options: mri_recon\swinmr_CCnpi_G1D30\options
+    models: mri_recon\swinmr_CCnpi_G1D30\models
+    images: mri_recon\swinmr_CCnpi_G1D30\images
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: ccsagnpi
+      dataroot_H: C:/Users/nitis/OneDrive/Desktop/dissertation/swinmr/trainsets/db_train
+      mask: G1D30
+      H_size: 96
+      sigma: 15
+      sigma_test: 15
+      is_noise: False
+      noise_level: 0.0
+      noise_var: 0.1
+      is_mini_dataset: False
+      mini_dataset_prec: 1
+      dataloader_shuffle: True
+      dataloader_num_workers: 16
+      dataloader_batch_size: 8
+      phase: train
+      scale: 1
+      n_channels: 1
+    ]
+    test:[
+      name: test_dataset
+      dataset_type: ccsagnpi
+      dataroot_H: C:/Users/nitis/OneDrive/Desktop/dissertation/swinmr/testsets/db_test
+      mask: G1D30
+      sigma: 15
+      sigma_test: 15
+      is_noise: False
+      noise_level: 0.0
+      noise_var: 0.1
+      resize_for_fid: False
+      phase: test
+      scale: 1
+      n_channels: 1
+    ]
+  ]
+  netG:[
+    net_type: swinir
+    upscale: 1
+    in_chans: 1
+    img_size: 256
+    window_size: 8
+    img_range: 1.0
+    depths: [6, 6, 6, 6, 6, 6]
+    embed_dim: 180
+    num_heads: [6, 6, 6, 6, 6, 6]
+    mlp_ratio: 2
+    upsampler: None
+    resi_connection: 1conv
+    init_type: default
+    scale: 1
+  ]
+  train:[
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    G_charbonnier_eps: 1e-09
+    alpha: 15
+    beta: 0.1
+    gamma: 0.0025
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0002
+    G_optimizer_wd: 0
+    G_optimizer_clipgrad: None
+    G_optimizer_reuse: True
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [50000, 70000, 90000, 100000, 110000]
+    G_scheduler_gamma: 0.5
+    G_regularizer_orthstep: None
+    G_regularizer_clipstep: None
+    G_param_strict: True
+    E_param_strict: True
+    checkpoint_test: 10000
+    checkpoint_save: 10000
+    checkpoint_print: 200
+    is_early_stopping: False
+    early_stopping_num: 8
+    freeze_patch_embedding: False
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+  ]
+  opt_path: C:\Users\nitis\OneDrive\Desktop\dissertation\swinmr\options\SwinMR\example\train_swinmr_CCnpi_G1D30.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: True
+  num_gpu: 2
+  rank: 0
+  world_size: 1
+
+25-03-10 01:20:26.307 : Number of train images: 25, iters: 4
+25-03-10 01:20:56.382 :   task: swinmr_CCnpi_G1D30
+  model: swinmr_npi
+  mask: G1D30
+  gpu_ids: [0, 1]
+  dist: False
+  n_channels: 1
+  manual_seed: 42
+  path:[
+    root: mri_recon
+    pretrained_netG: None
+    pretrained_netE: None
+    task: mri_recon\swinmr_CCnpi_G1D30
+    log: mri_recon\swinmr_CCnpi_G1D30
+    options: mri_recon\swinmr_CCnpi_G1D30\options
+    models: mri_recon\swinmr_CCnpi_G1D30\models
+    images: mri_recon\swinmr_CCnpi_G1D30\images
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: ccsagnpi
+      dataroot_H: C:/Users/nitis/OneDrive/Desktop/dissertation/swinmr/trainsets/db_train
+      mask: G1D30
+      H_size: 96
+      sigma: 15
+      sigma_test: 15
+      is_noise: False
+      noise_level: 0.0
+      noise_var: 0.1
+      is_mini_dataset: False
+      mini_dataset_prec: 1
+      dataloader_shuffle: True
+      dataloader_num_workers: 16
+      dataloader_batch_size: 8
+      phase: train
+      scale: 1
+      n_channels: 1
+    ]
+    test:[
+      name: test_dataset
+      dataset_type: ccsagnpi
+      dataroot_H: C:/Users/nitis/OneDrive/Desktop/dissertation/swinmr/testsets/db_test
+      mask: G1D30
+      sigma: 15
+      sigma_test: 15
+      is_noise: False
+      noise_level: 0.0
+      noise_var: 0.1
+      resize_for_fid: False
+      phase: test
+      scale: 1
+      n_channels: 1
+    ]
+  ]
+  netG:[
+    net_type: swinir
+    upscale: 1
+    in_chans: 1
+    img_size: 256
+    window_size: 8
+    img_range: 1.0
+    depths: [6, 6, 6, 6, 6, 6]
+    embed_dim: 180
+    num_heads: [6, 6, 6, 6, 6, 6]
+    mlp_ratio: 2
+    upsampler: None
+    resi_connection: 1conv
+    init_type: default
+    scale: 1
+  ]
+  train:[
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    G_charbonnier_eps: 1e-09
+    alpha: 15
+    beta: 0.1
+    gamma: 0.0025
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0002
+    G_optimizer_wd: 0
+    G_optimizer_clipgrad: None
+    G_optimizer_reuse: True
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [50000, 70000, 90000, 100000, 110000]
+    G_scheduler_gamma: 0.5
+    G_regularizer_orthstep: None
+    G_regularizer_clipstep: None
+    G_param_strict: True
+    E_param_strict: True
+    checkpoint_test: 10000
+    checkpoint_save: 10000
+    checkpoint_print: 200
+    is_early_stopping: False
+    early_stopping_num: 8
+    freeze_patch_embedding: False
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+  ]
+  opt_path: C:\Users\nitis\OneDrive\Desktop\dissertation\swinmr\options\SwinMR\example\train_swinmr_CCnpi_G1D30.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: True
+  num_gpu: 2
+  rank: 0
+  world_size: 1
+
+25-03-10 01:20:56.553 : Number of train images: 25, iters: 4
+25-03-10 01:21:24.235 :   task: swinmr_CCnpi_G1D30
+  model: swinmr_npi
+  mask: G1D30
+  gpu_ids: [0, 1]
+  dist: False
+  n_channels: 1
+  manual_seed: 42
+  path:[
+    root: mri_recon
+    pretrained_netG: None
+    pretrained_netE: None
+    task: mri_recon\swinmr_CCnpi_G1D30
+    log: mri_recon\swinmr_CCnpi_G1D30
+    options: mri_recon\swinmr_CCnpi_G1D30\options
+    models: mri_recon\swinmr_CCnpi_G1D30\models
+    images: mri_recon\swinmr_CCnpi_G1D30\images
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: ccsagnpi
+      dataroot_H: C:/Users/nitis/OneDrive/Desktop/dissertation/swinmr/trainsets/db_train
+      mask: G1D30
+      H_size: 96
+      sigma: 15
+      sigma_test: 15
+      is_noise: False
+      noise_level: 0.0
+      noise_var: 0.1
+      is_mini_dataset: False
+      mini_dataset_prec: 1
+      dataloader_shuffle: True
+      dataloader_num_workers: 16
+      dataloader_batch_size: 8
+      phase: train
+      scale: 1
+      n_channels: 1
+    ]
+    test:[
+      name: test_dataset
+      dataset_type: ccsagnpi
+      dataroot_H: C:/Users/nitis/OneDrive/Desktop/dissertation/swinmr/testsets/db_test
+      mask: G1D30
+      sigma: 15
+      sigma_test: 15
+      is_noise: False
+      noise_level: 0.0
+      noise_var: 0.1
+      resize_for_fid: False
+      phase: test
+      scale: 1
+      n_channels: 1
+    ]
+  ]
+  netG:[
+    net_type: swinir
+    upscale: 1
+    in_chans: 1
+    img_size: 256
+    window_size: 8
+    img_range: 1.0
+    depths: [6, 6, 6, 6, 6, 6]
+    embed_dim: 180
+    num_heads: [6, 6, 6, 6, 6, 6]
+    mlp_ratio: 2
+    upsampler: None
+    resi_connection: 1conv
+    init_type: default
+    scale: 1
+  ]
+  train:[
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    G_charbonnier_eps: 1e-09
+    alpha: 15
+    beta: 0.1
+    gamma: 0.0025
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0002
+    G_optimizer_wd: 0
+    G_optimizer_clipgrad: None
+    G_optimizer_reuse: True
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [50000, 70000, 90000, 100000, 110000]
+    G_scheduler_gamma: 0.5
+    G_regularizer_orthstep: None
+    G_regularizer_clipstep: None
+    G_param_strict: True
+    E_param_strict: True
+    checkpoint_test: 10000
+    checkpoint_save: 10000
+    checkpoint_print: 200
+    is_early_stopping: False
+    early_stopping_num: 8
+    freeze_patch_embedding: False
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+  ]
+  opt_path: C:\Users\nitis\OneDrive\Desktop\dissertation\swinmr\options\SwinMR\example\train_swinmr_CCnpi_G1D30.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: True
+  num_gpu: 2
+  rank: 0
+  world_size: 1
+
+25-03-10 01:21:24.397 : Number of train images: 25, iters: 4
