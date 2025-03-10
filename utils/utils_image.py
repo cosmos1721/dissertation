@@ -746,7 +746,8 @@ def calculate_ssim_single(img1, img2, border=0):
     img1 = img1.astype(np.float64)
     img2 = img2.astype(np.float64)
 
-    return skimage.metrics.structural_similarity(img1, img2)
+    # Add data_range=1.0 since we're working with normalized images
+    return skimage.metrics.structural_similarity(img1, img2, data_range=1.0)
 
 # --------------------------------------------
 # LPIPS
