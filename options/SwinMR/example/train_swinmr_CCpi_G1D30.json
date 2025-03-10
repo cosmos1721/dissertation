@@ -28,7 +28,7 @@
       , "mini_dataset_prec": 1    // CC 4700 total
       , "dataloader_shuffle": true
       , "dataloader_num_workers": 10
-      , "dataloader_batch_size": 5
+      , "dataloader_batch_size": 4
     }
     , "test": {
       "name": "test_dataset"
