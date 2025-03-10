@@ -3,13 +3,13 @@ import torch
 import torch.nn as nn
 from utils.utils_bnorm import merge_bn, tidy_sequential
 from torch.nn.parallel import DataParallel, DistributedDataParallel
-
+import torch_xla.core.xla_model as xm
 
 class ModelBase():
     def __init__(self, opt):
         self.opt = opt                         # opt
         self.save_dir = opt['path']['models']  # save models
-        self.device = 'cpu'
+        self.device = xm.xla_device()
         self.is_train = opt['is_train']        # training or not
         self.schedulers = []                   # schedulers
 
