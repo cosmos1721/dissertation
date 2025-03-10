@@ -32,8 +32,8 @@ def main(json_path):
     parser.add_argument('--opt', type=str, default=json_path, help='Path to option JSON file.')
     opt = option.parse(parser.parse_args().opt, is_train=False)
 
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    # device = 'cpu'
+    # device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    device = 'cpu'
     # set up model
     if os.path.exists(opt['model_path']):
         print(f"loading model from {opt['model_path']}")
