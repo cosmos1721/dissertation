@@ -33,7 +33,9 @@ def main(json_path):
     opt = option.parse(parser.parse_args().opt, is_train=False)
 
     # device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    device = 'cpu'
+    import torch_xla.core.xla_model as xm
+    device = xm.xla_device()
+    
     # set up model
     if os.path.exists(opt['model_path']):
         print(f"loading model from {opt['model_path']}")
