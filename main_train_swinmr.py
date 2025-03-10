@@ -162,9 +162,9 @@ def main(json_path=''):
     # ----------------------------------------
     '''
 
-    for epoch in range(10000):  # keep running
+    for epoch in range(5000):  # keep running
         print("---------------------------------------------------------")
-        print(f"Epoch {epoch} of 10000")
+        print(f"Epoch {epoch} of 5000")
         print("---------------------------------------------------------")
         if opt['dist']:
             train_sampler.set_epoch(epoch)
