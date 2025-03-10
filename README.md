@@ -82,9 +82,9 @@ To test SwinMR (nPI) on CC:
 This repository is based on:
 
 SwinIR: Image Restoration Using Swin Transformer 
-([code](https://github.com/JingyunLiang/SwinIR) and [paper](https://openaccess.thecvf.com/kaggle/working/dissertation/ICCV2021W/AIM/html/Liang_SwinIR_Image_Restoration_Using_Swin_Transformer_ICCVW_2021_paper.html));
+([code](https://github.com/JingyunLiang/SwinIR) and [paper](https://openaccess.thecvf.com/content/dissertation/ICCV2021W/AIM/html/Liang_SwinIR_Image_Restoration_Using_Swin_Transformer_ICCVW_2021_paper.html));
 
 
 Swin Transformer: Hierarchical Vision Transformer using Shifted Windows
-([code](https://github.com/microsoft/Swin-Transformer) and [paper](https://openaccess.thecvf.com/kaggle/working/dissertation/ICCV2021/html/Liu_Swin_Transformer_Hierarchical_Vision_Transformer_Using_Shifted_Windows_ICCV_2021_paper.html)).
+([code](https://github.com/microsoft/Swin-Transformer) and [paper](https://openaccess.thecvf.com/content/dissertation/ICCV2021/html/Liu_Swin_Transformer_Hierarchical_Vision_Transformer_Using_Shifted_Windows_ICCV_2021_paper.html)).
 
