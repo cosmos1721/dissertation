@@ -162,7 +162,7 @@ def main(json_path=''):
     # ----------------------------------------
     '''
 
-    for epoch in range(5000):  # keep running
+    for epoch in range(1000):  # keep running
         print("---------------------------------------------------------")
         print(f"Epoch {epoch} of 5000")
         print("---------------------------------------------------------")
