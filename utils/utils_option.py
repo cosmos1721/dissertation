@@ -30,11 +30,14 @@ def parse(opt_path, is_train=True):
         for line in f:
             line = line.split('//')[0] + '\n'
             json_str += line
+            print("________________________________________________")
+            print(json_str)
+            print("________________________________________________")
 
     # ----------------------------------------
     # initialize opt
     # ----------------------------------------
-    opt = json.loads(json_str, object_pairs_hook=OrderedDict)
+    opt = json.loads(json_str)
 
     opt['opt_path'] = opt_path
     opt['is_train'] = is_train
